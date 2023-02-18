@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SignIn</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            padding: 0.2rem;
+            font-size: 1.2rem;
+            margin: 0 0 1rem;
+        }
+
+        textarea {
+            max-width: 20%;
+            min-width: 20%;
+            max-height: 10rem;
+            min-height: 10rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: blueviolet;
+        }
+
+        form {
+            background: url(../Img/navlogo.jpg) no-repeat;
+            background-size: 100% 100%;
+            border: 0.5rem solid blueviolet;
+            font-family: Times New Roman;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        /* input[type="select"], */
+        input[type="date"],
+        input[type="number"],
+        input[type="option"],
+        input[type="register"],
+        input[type="submit"],
+        input[type="reset"],
+        input[type="phone"],
+        select,
+        textarea,
+        #add,
+        button {
+            border: 2px solid blueviolet;
+            /* border-radius-x: 4%; */
+            color: blueviolet;
+        }
+form > img{
+    width: 10%;
+    height: 8rem;
+    position: absolute;
+    right: .7rem;
+    top: .7rem;
+    /* float: right; */
+    border: 4px solid blueviolet;
+    /* border-bottom-left-radius: 80%; */
+}
+    </style>
+
+    <body>
+        <form action="Results.html" method="get" target="_parent">
+            <img src="../Img/featurelogo.jpg" alt="">
+            <h1>SignIn Form</h1>
+
+            <label for="fname">First Name: </label>
+            <input
+                type="text"
+                id="fname"
+                value="first name"
+                name="First Name"
+                placeholder="your first name here"
+            />
+
+            <label for="midname">Middle Name:</label>
+            <input
+                type="text"
+                id="midname"
+                name="Middle Name"
+                placeholder="your middle name here"
+            />
+
+            <label for="lname">Last Name: </label>
+            <input type="text" id="lname" placeholder="your last name here" />
+
+            <br />
+
+            <label for="gender">Gender: </label>
+
+            <input type="radio" id="m" name="gender" />
+            <label for="m">Male</label>
+
+            <input type="radio" id="f" name="gender" />
+            <label for="f">Female</label>
+
+            <input type="radio" id="o" name="gender" />
+            <label for="o">Others</label>
+
+            <br />
+
+            <label for="genere">Genere: </label>
+            <input type="checkbox" name="Pop" id="pop" >
+            <label for="pop">Pop</label>
+
+            <input type="checkbox" name="Rock" id="rock">
+            <label for="rock">Rock</label>
+
+            <input type="checkbox" name="Classic" id="classic">
+            <label for="classic">Classic</label>
+
+            <br>
+
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                placeholder="age here"
+                value="18"
+                min="15"
+                max="30"
+                step="3"
+            />
+
+            <br />
+
+            <label for="dob">Date of Birth: </label>
+            <input type="date" 
+            id="dob" 
+            value="date of birth"
+            min="2023-12-15"
+            />
+
+            <br />
+
+            <label for="add">Address</label>
+            <select name="" id="add">
+                <option value="">Bhaktpur</option>
+                <option value="">Kathmandu</option>
+                <option value="">Rautahat</option>
+                <option value="">Pokhara</option>
+            </select>
+
+            <br />
+
+            <!-- autocomplete = on (default), off to off autosuggestion of previous input 
+placeholder = value, in placeholder (permanent)(write text above it)
+value = value, above placeholder (temporary)(clear it to write text)-->
+            <label for="email">Email Address: </label>
+            <input
+                type="email"
+                id="email"
+                placeholder="your email address"
+                autocomplete="on"
+                value="email address"
+            />
+
+            <br />
+
+            <label for="phone">Phone No :</label>
+            <select name="" id="phone">
+                <option value="">977</option>
+                <option value="">978</option>
+                <option value="">979</option>
+                <option value="">980</option>
+                <option value="">981</option>
+                <option value="">982</option>
+                <option value="">983</option>
+            </select>
+            <input type="phone"
+                   placeholder="98480****">
+
+            <br>
+
+            <label for="pwd">Password: </label>
+            <input type="password" id="pwd" placeholder="your password here" />
+
+            <br />
+
+            <label for="desc">About<br /></label>
+            <textarea
+                name=""
+                id="desc"
+                cols="30"
+                rows="10"
+                maxlength="250"
+            ></textarea>
+
+            <br />
+
+            <input type="reset" />
+            <input type="submit" />
+            <button>Register</button>
+        </form>
+    </body>
+</html>
