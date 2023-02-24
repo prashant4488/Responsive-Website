@@ -8,7 +8,7 @@
 
 body {
     font-family: sans-serif;
-    background: url(/Img/featureimg.jpg) no-repeat;
+    /* background: url(/Img/featureimg.jpg) no-repeat; */
     background-size: cover;
 }
 
@@ -36,14 +36,14 @@ li a {
 
 ul > img {
     max-width: 2%;
-    height: 1.5rem;
+    max-height: 1.5rem; 
     border-radius: 50%;
     border: 0.1rem solid blueviolet;
 }
 
 nav + img {
-    width: 10%;
-    height: 8rem;
+    max-width: 10%;
+    max-height: 8rem;
     position: absolute;
     left: 40rem;
     top: 4rem;
@@ -68,3 +68,5 @@ li a:hover {
     border: 2px solid blueviolet;
     box-shadow: 1rem 0.5rem 0.5rem blueviolet;
 }
+
+mediaqueries 

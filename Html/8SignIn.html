@@ -38,7 +38,6 @@
         input[type="text"],
         input[type="email"],
         input[type="password"],
-        /* input[type="select"], */
         input[type="date"],
         input[type="number"],
         input[type="option"],
@@ -54,21 +53,21 @@
             /* border-radius-x: 4%; */
             color: blueviolet;
         }
-form > img{
-    width: 10%;
-    height: 8rem;
-    position: absolute;
-    right: .7rem;
-    top: .7rem;
-    /* float: right; */
-    border: 4px solid blueviolet;
-    /* border-bottom-left-radius: 80%; */
-}
+        form > img {
+            width: 10%;
+            height: 8rem;
+            /* position: absolute; */
+            float: right;
+            /* right: 0.7rem;
+            top: 0.7rem; */
+            border: 4px solid blueviolet;
+            /* border-bottom-left-radius: 80%; */
+        }
     </style>
 
     <body>
         <form action="Results.html" method="get" target="_parent">
-            <img src="../Img/featurelogo.jpg" alt="">
+            <img src="../Img/featurelogo.jpg" alt="" />
             <h1>SignIn Form</h1>
 
             <label for="fname">First Name: </label>
@@ -78,7 +77,10 @@ form > img{
                 value="first name"
                 name="First Name"
                 placeholder="your first name here"
+                onkeyup="fname_validate()"
             />
+            <span id="fname_msg"></span>
+            <br />
 
             <label for="midname">Middle Name:</label>
             <input
@@ -87,7 +89,7 @@ form > img{
                 name="Middle Name"
                 placeholder="your middle name here"
             />
-
+            <br />
             <label for="lname">Last Name: </label>
             <input type="text" id="lname" placeholder="your last name here" />
 
@@ -107,16 +109,16 @@ form > img{
             <br />
 
             <label for="genere">Genere: </label>
-            <input type="checkbox" name="Pop" id="pop" >
+            <input type="checkbox" name="Pop" id="pop" />
             <label for="pop">Pop</label>
 
-            <input type="checkbox" name="Rock" id="rock">
+            <input type="checkbox" name="Rock" id="rock" />
             <label for="rock">Rock</label>
 
-            <input type="checkbox" name="Classic" id="classic">
+            <input type="checkbox" name="Classic" id="classic" />
             <label for="classic">Classic</label>
 
-            <br>
+            <br />
 
             <label for="age">Age</label>
             <input
@@ -132,10 +134,11 @@ form > img{
             <br />
 
             <label for="dob">Date of Birth: </label>
-            <input type="date" 
-            id="dob" 
-            value="date of birth"
-            min="2023-12-15"
+            <input
+                type="date"
+                id="dob"
+                value="date of birth"
+                min="2023-12-15"
             />
 
             <br />
@@ -150,22 +153,21 @@ form > img{
 
             <br />
 
-            <!-- autocomplete = on (default), off to off autosuggestion of previous input 
-placeholder = value, in placeholder (permanent)(write text above it)
-value = value, above placeholder (temporary)(clear it to write text)-->
             <label for="email">Email Address: </label>
             <input
-                type="email"
+                type="text"
                 id="email"
                 placeholder="your email address"
                 autocomplete="on"
                 value="email address"
+                onkeyup="email_validate()"
             />
+            <span id="email_msg"></span>
 
             <br />
 
             <label for="phone">Phone No :</label>
-            <select name="" id="phone">
+            <select name="">
                 <option value="">977</option>
                 <option value="">978</option>
                 <option value="">979</option>
@@ -174,16 +176,18 @@ value = value, above placeholder (temporary)(clear it to write text)-->
                 <option value="">982</option>
                 <option value="">983</option>
             </select>
-            <input type="phone"
-                   placeholder="98480****">
-
-            <br>
-
-            <label for="pwd">Password: </label>
-            <input type="password" id="pwd" placeholder="your password here" />
-
+            <input type="text" placeholder="98480****"
+            onkeyup="phoneval()"
+            id="phone"/>
+           <span id="phonemsg"></span>
             <br />
 
+            <label for="pwd">Password: </label>
+            <input type="text" id="pwd" placeholder="your password here"
+            onkeyup="password()"/>
+            <span id="pwd_msg"></span>
+            <br />
+            
             <label for="desc">About<br /></label>
             <textarea
                 name=""
@@ -199,5 +203,6 @@ value = value, above placeholder (temporary)(clear it to write text)-->
             <input type="submit" />
             <button>Register</button>
         </form>
+        <script src="../JS/FormValidn.js"></script>
     </body>
 </html>
